@@ -4,7 +4,7 @@
 
 This project will contains best practices for solving generic home task such as "Display list of <SMTH> then show <SMTH> full info"
 
-Project targeted for open API [OMDB](www.omdbapi.com), but you need to generate your own token an set is as parameter into `gradle.properties`
+Project targeted for open API [OMDB](http://www.omdbapi.com), but you need to generate your own token an set is as parameter into `gradle.properties`
 such as `omdbToken=<TOKEN>` or use ENV `omdbToken`
 
 | List of movies             |  Details for specific movie |
