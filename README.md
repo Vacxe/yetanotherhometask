@@ -1,7 +1,8 @@
 # Yet Another Home Task
 
 ### Status
-![Master](https://github.com/vacxe/yetanotherhometask/actions/workflows/master-check.yml/badge.svg)
+![Master](https://github.com/vacxe/yetanotherhometask/actions/workflows/master-unit-tests.yml/badge.svg)
+![Master](https://github.com/vacxe/yetanotherhometask/actions/workflows/master-assemble.yml/badge.svg)
 
 ### Description:
 
