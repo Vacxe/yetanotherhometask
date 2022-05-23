@@ -1,5 +1,8 @@
 # Yet Another Home Task
 
+### Status
+![Master](https://github.com/vacxe/yetanotherhometask/actions/workflows/master-check.yml/badge.svg)
+
 ### Description:
 
 This project will contains best practices for solving generic home task such as "Display list of <SMTH> then show <SMTH> full info"
