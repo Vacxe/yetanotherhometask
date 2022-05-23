@@ -14,7 +14,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         var omdbToken = System.getenv("omdbToken") ?: project.omdbToken
-        buildConfigField "String", "omdbToken", "\"$omdbToken\""
+        buildConfigField "String", "OMDBTOKEN", "\"$omdbToken\""
     }
 
     buildTypes {

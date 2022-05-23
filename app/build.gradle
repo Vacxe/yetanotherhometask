@@ -20,7 +20,7 @@ android {
             useSupportLibrary true
         }
 
-        var omdbToken = System.getenv("omdbToken") ?: project.omdbToken
+        var omdbToken = System.getenv("OMDBTOKEN") ?: project.omdbToken
         buildConfigField "String", "omdbToken", "\"$omdbToken\""
     }
 
