@@ -19,3 +19,7 @@ Used in project:
 * Network communication based on Retrofit + Calls interception
 * Sample of external API library
 * Integration test for API library
+
+CI (Github Flow): 
+* Library unit tests
+* App unit tests
