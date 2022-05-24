@@ -5,6 +5,8 @@ data class Movie(
     val title: String,
     val poster: String,
     val year: String,
+    val plot: String,
     val actors: String,
-    val languages: String
+    val language: String,
+    val runtime: String
 )

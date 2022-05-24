@@ -30,7 +30,7 @@ class MovieDetailsActivity : ComponentActivity() {
                     when (val activeState = state.value) {
                         is MovieDetailsState.Error -> CommonView.ErrorView(errorMessage = activeState.message)
                         MovieDetailsState.Loading -> CommonView.LoadingView()
-                        is MovieDetailsState.Content -> Views.Content(activeState.content)
+                        is MovieDetailsState.Content -> Views.Content(activeState.movie)
                         null -> throw Exception("Undesirable state")
                     }
                 }

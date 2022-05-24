@@ -19,16 +19,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import io.github.vacxe.omdbapi.dto.MovieDetailResponse
+import io.github.vacxe.data.movie.Movie
 import io.github.vacxe.yetanotherhometask.ui.theme.YetAnotherHomeTaskTheme
 
 object Views {
     @Composable
-    fun Content(content: MovieDetailResponse) {
+    fun Content(movie: Movie) {
         YetAnotherHomeTaskTheme {
             Surface(color = MaterialTheme.colors.background) {
                 Image(
-                    painter = rememberAsyncImagePainter(content.poster),
+                    painter = rememberAsyncImagePainter(movie.poster),
                     contentDescription = null,
                     modifier = Modifier
                         .fillMaxSize()
@@ -44,7 +44,7 @@ object Views {
                         .background(Color.Transparent)
                 ) {
                     Text(
-                        text = content.title ?: "Unknown title",
+                        text = movie.title,
                         fontSize = 32.sp,
                         modifier = Modifier
                             .fillMaxSize()
@@ -56,23 +56,23 @@ object Views {
                             .padding(top = 8.dp)
                     ) {
                         Image(
-                            painter = rememberAsyncImagePainter(content.poster),
+                            painter = rememberAsyncImagePainter(movie.poster),
                             contentDescription = null,
                             modifier = Modifier.size(128.dp),
                         )
 
                         Text(
-                            text = content.plot ?: "Plot doesn't exist",
+                            text = movie.plot,
                             fontSize = 16.sp,
                             modifier = Modifier.fillMaxSize(),
                             style = TextStyle(textAlign = TextAlign.Start)
                         )
                     }
 
-                    content.year?.let { InfoRow(key = "Year", value = it) }
-                    content.actors?.let { InfoRow(key = "Actors", value = it) }
-                    content.language?.let { InfoRow(key = "Language", value = it) }
-                    content.runtime?.let { InfoRow(key = "Runtime", value = it) }
+                    InfoRow(key = "Year", value = movie.year)
+                    InfoRow(key = "Actors", value = movie.actors)
+                    InfoRow(key = "Language", value = movie.language)
+                    InfoRow(key = "Runtime", value = movie.runtime)
                 }
             }
         }
