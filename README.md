@@ -23,6 +23,7 @@ Used in project:
 * Network communication based on Retrofit + Calls interception
 * Sample of external API library
 * Integration test for API library
+* Unit test for domain layer
 
 CI (Github Flow): 
 * Library unit tests
