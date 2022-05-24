@@ -13,14 +13,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import io.github.vacxe.omdbapi.dto.SearchItem
+import io.github.vacxe.data.movie.MovieShort
 import io.github.vacxe.yetanotherhometask.ui.theme.YetAnotherHomeTaskTheme
 
 object Views {
     @Composable
     fun Content(
-        content: List<SearchItem>?,
-        onItemClick: (searchItem: SearchItem) -> Unit
+        content: List<MovieShort>,
+        onItemClick: (movieShort: MovieShort) -> Unit
     ) {
         YetAnotherHomeTaskTheme {
             Column(
@@ -28,7 +28,7 @@ object Views {
                     .fillMaxSize()
                     .background(MaterialTheme.colors.background)
             ) {
-                content?.forEach {
+                content.forEach {
                     SearchItemView(it, onItemClick = onItemClick)
                 }
             }
@@ -51,8 +51,8 @@ object Views {
 
     @Composable
     private fun SearchItemView(
-        searchItem: SearchItem,
-        onItemClick: (searchItem: SearchItem) -> Unit
+        searchItem: MovieShort,
+        onItemClick: (movieShort: MovieShort) -> Unit
     ) {
         Row(modifier = Modifier
             .fillMaxSize()
@@ -71,13 +71,13 @@ object Views {
                     .padding(start = 8.dp)
             ) {
                 Text(
-                    text = searchItem.title ?: "Unknown",
+                    text = searchItem.title,
                     fontSize = 24.sp,
                     style = TextStyle(textAlign = TextAlign.Start)
                 )
 
                 Text(
-                    text = searchItem.year ?: "Unknown",
+                    text = searchItem.year,
                     fontSize = 16.sp,
                     style = TextStyle(textAlign = TextAlign.Center)
                 )

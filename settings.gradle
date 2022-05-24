@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 rootProject.name = "Yet another home task"
 include ':app'
 include ':omdbapi'
+include ':domain'
+include ':data'

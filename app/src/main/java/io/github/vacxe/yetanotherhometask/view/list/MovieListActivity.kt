@@ -44,7 +44,7 @@ class MovieListActivity : ComponentActivity() {
                         is MovieListState.Error -> CommonView.ErrorView(errorMessage = activeState.message)
                         MovieListState.Loading -> CommonView.LoadingView()
                         is MovieListState.Content -> Views.Content(activeState.content,
-                            onItemClick = { navigateToDetails(it.imdbID) })
+                            onItemClick = { navigateToDetails(it.imdbId) })
                         null -> throw Exception("Undesirable state")
                     }
                 }
