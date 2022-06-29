@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'adeum'
 }
 
 android {
@@ -50,6 +51,11 @@ android {
     }
 }
 
+adeum {
+    enabledForDebugBuilds = true
+    enabledForReleaseBuilds = true
+}
+
 dependencies {
     implementation project(':omdbapi')
     implementation project(':domain')
@@ -68,6 +74,8 @@ dependencies {
     implementation compose.runtimeLivedata
 
     implementation ui.coilCompose
+
+    implementation 'com.appdynamics:appdynamics-runtime:22.2.2'
 
     //Hilt
     implementation "com.google.dagger:hilt-android:2.42"
