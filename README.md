@@ -28,3 +28,5 @@ Used in project:
 CI (Github Flow): 
 * Library unit tests
 * App unit tests
+* Test fake CI status update
+  
